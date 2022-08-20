@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="corporate">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <title>Shopping With Js - session dom</title>
+   <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+   <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+   <header>
+      <div class="btm-nav z-30">
+         <button class="bg-pink-200 text-pink-600">
+           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
+           <span class="btm-nav-label">Home</span>
+         </button>
+         <button class="active bg-neutral text-neutral-content">
+           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+           <span class="btm-nav-label">Shopping With Js</span>
+         </button>
+         <button class="bg-teal-200 text-teal-600">
+           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+           <span class="btm-nav-label">Statics</span>
+         </button>
+       </div>
+   </header>
+<main class="mt-8">
+   <section class="pb-40">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-4/5 mx-auto divide-x-2 divide-slate-900">
+         <!-- products cards grid -->
+         <div class="grid grid-cols-1 md:grid-cols-2 gap-5 w-full"> 
+            <!-- card-1 -->
+            <div class="card card-compact  bg-base-100 shadow-xl rounded-xl">
+               <figure><img src="https://placeimg.com/400/225/arch" class="w-100 h-auto"alt="Shoes" /></figure>
+               <div class="card-body">
+                 <h2 class="card-title">Coffe js</h2>
+                 <p>price: $ <span>100</span></p>
+                 <div class="card-actions justify-end">
+                   <button class="btn btn-primary rounded-md " onclick="addToCart(this)">Buy Now</button>
+                 </div>
+               </div>
+             </div>
+            <!-- card-2 -->
+            <div class="card card-compact  bg-base-100 shadow-xl rounded-xl">
+               <figure><img src="https://placeimg.com/400/225/arch" class="w-100 h-auto"alt="Shoes" /></figure>
+               <div class="card-body">
+                 <h2 class="card-title">Heart js</h2>
+                 <p>price: $ <span>500</span></p>
+                 <div class="card-actions justify-end">
+                   <button class="btn btn-primary rounded-md " onclick="addToCart(this)">Buy Now</button>
+                 </div>
+               </div>
+             </div>
+            <!-- card-3 -->
+            <div class="card card-compact  bg-base-100 shadow-xl rounded-xl">
+               <figure><img src="https://placeimg.com/400/225/arch" class="w-100 h-auto"alt="Shoes" /></figure>
+               <div class="card-body">
+                 <h2 class="card-title">umbrella js</h2>
+                 <p>price: $ <span>107</span></p>
+                 <div class="card-actions justify-end">
+                   <button class="btn btn-primary rounded-md " onclick="addToCart(this)">Buy Now</button>
+                 </div>
+               </div>
+             </div>
+            <!-- card-4 -->
+            <div class="card card-compact  bg-base-100 shadow-xl rounded-xl">
+               <figure><img src="https://placeimg.com/400/225/arch" class="w-100 h-auto"alt="Shoes" /></figure>
+               <div class="card-body">
+                 <h2 class="card-title">panda js</h2>
+                 <p>price: $ <span>110</span></p>
+                 <div class="card-actions justify-end">
+                   <button class="btn btn-primary rounded-md " onclick="addToCart(this)">Buy Now</button>
+                 </div>
+               </div>
+             </div>
+            <!-- card-5 -->
+            <div class="card card-compact  bg-base-100 shadow-xl rounded-xl">
+               <figure><img src="https://placeimg.com/400/225/arch" class="w-100 h-auto"alt="Shoes" /></figure>
+               <div class="card-body">
+                 <h2 class="card-title">vue js</h2>
+                 <p>price: $ <span>100</span></p>
+                 <div class="card-actions justify-end">
+                   <button class="btn btn-primary rounded-md " onclick="addToCart(this)">Buy Now</button>
+                 </div>
+               </div>
+             </div>
+            
+         
+         </div>
+         <div class="pl-2">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mt-5">Total Added Product: <span class=" text-purple-500 font-bold" id="total-added-product">00</span></h2>
+
+            <div class="overflow-x-auto">
+               <table class="table table-zebra w-full mt-8 uppercase font-bold rounded-lg">
+                 <!-- head -->
+                 <thead>
+                   <tr >
+                     <th class="text-lg text-white  bg-pink-500"></th>
+                     <th class="text-lg text-white  bg-pink-500">Name</th>
+                     <th class="text-lg text-white  bg-pink-500">price</th>
+                   </tr>
+                 </thead>
+                 <tbody id="tbody">
+                 </tbody>
+                 <tfoot id="tfoot" class=" bg-pink-500 ">
+
+                 </tfoot>
+               </table>
+             </div>
+         </div>
+      </div>
+   </section>
+</main>
+
+   <script src="js/app.js"></script>
+</body>
+</html>
